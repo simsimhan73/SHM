@@ -1,0 +1,21 @@
+﻿<Window x:Class="SHM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SHM"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="LightGray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Button Content="시작화면" BorderThickness="1,0,1,0" Background="LightGray" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+            <Button Content="자리배치" BorderThickness="1,0,1,0" Background="LightGray" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+            <Button Content="학생명단" BorderThickness="1,0,1,0" Background="LightGray" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <Frame x:Name="FrameContent" Grid.Row="1" Source="StartUp.xaml"/>
+    </Grid>
+</Window>

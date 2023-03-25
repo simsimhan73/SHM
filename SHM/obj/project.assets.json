@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\_Github\\SHM\\SHM\\SHM\\SHM.csproj",
+      "projectUniqueName": "D:\\_Github\\SHM\\SHM\\SHM.csproj",
       "projectName": "SHM",
-      "projectPath": "D:\\_Github\\SHM\\SHM\\SHM\\SHM.csproj",
+      "projectPath": "D:\\_Github\\SHM\\SHM\\SHM.csproj",
       "packagesPath": "C:\\Users\\lmki6\\.nuget\\packages\\",
-      "outputPath": "D:\\_Github\\SHM\\SHM\\SHM\\obj\\",
+      "outputPath": "D:\\_Github\\SHM\\SHM\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\vsSDK\\NuGetPackages"

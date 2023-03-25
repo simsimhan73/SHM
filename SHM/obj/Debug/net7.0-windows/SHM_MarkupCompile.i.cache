@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\_Github\SHM\SHM\SHM\obj\Debug\net7.0-windows\
+D:\_Github\SHM\SHM\obj\Debug\net7.0-windows\
 SHM
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-D:\_Github\SHM\SHM\SHM\App.xaml
-11407045341
+D:\_Github\SHM\SHM\App.xaml
+41218123327
 
-5-1566987588
+92127625904
 1981462702791
-MainWindow.xaml;
+View\MainWindow.xaml;View\Seat.xaml;View\StartUp.xaml;View\StudentList.xaml;
 
 False
 
