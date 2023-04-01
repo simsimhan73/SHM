@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SHM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,12 @@ namespace SHM.View
     /// <summary>
     /// Page2.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class Page2 : Page
+    public partial class Seat : Page
     {
-        public Page2()
+        public Seat()
         {
             InitializeComponent();
+            DataContext = App.Current.Services.GetService(typeof(SeatViewModel));
         }
     }
 }
