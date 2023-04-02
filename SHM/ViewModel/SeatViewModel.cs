@@ -18,6 +18,8 @@ namespace SHM.ViewModel
     {
         public ICommand RunCommand { get; set; }
         public ICommand PDFCommand { get; set; }
+        public ICommand SaveCommand { get; set; }
+        public ICommand LoadCommand { get; set; }
 
         private string _inputname;
         private ObservableCollection<ChairModel> _chairs;
@@ -35,6 +37,24 @@ namespace SHM.ViewModel
             _nowrow = 0;
             
             RunCommand = new RelayCommand(Run);
+            PDFCommand = new RelayCommand(PDF);
+            SaveCommand = new RelayCommand(Save);
+            LoadCommand = new RelayCommand(Load);
+        }
+
+        private void Save()
+        {
+            SeatCore.Save(_chairs, _room.Height, _room.Width);
+        }
+
+        private void Load()
+        {
+            SeatCore.Load(ref _chairs, _room.Height, _room.Width);
+        }
+
+        private void PDF()
+        {
+            SeatCore.CreatePDF(SeatCore.STOL(_chairs, _room.Height, _room.Width), _room.Width, _room.Height);
         }
 
         private void Run()
@@ -64,6 +84,7 @@ namespace SHM.ViewModel
 
         private void ChangeSize()
         {
+            _nowrow = 0;
             _chairs.Clear();
             while(_chairs.Count < _room.Width*_room.Height)
             {

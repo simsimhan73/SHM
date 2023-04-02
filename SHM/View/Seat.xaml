@@ -23,8 +23,8 @@
                 <TextBox Text="{Binding Room.Width, Converter={StaticResource StringToIntConverter}, UpdateSourceTrigger=PropertyChanged}" Width="50" Height="50" Margin="120,0,628,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                 <Button Content="PDF" Height="50" Width="70" Margin="258,24,470,24" Command="{Binding PDFCommand}"/>
                 <Button Content="실행" Height="50" Width="70" Margin="428,0,300,0" Command="{Binding RunCommand}"/>
-                <Button Content="로드" Height="50" Width="100" Margin="530,0,168,0" />
-                <Button Content="저장" Height="50" Width="100" Margin="658,0,40,0"/>
+                <Button Content="로드" Height="50" Width="100" Margin="530,0,168,0" Command="{Binding LoadCommand}" />
+                <Button Content="저장" Height="50" Width="100" Margin="658,0,40,0" Command="{Binding SaveCommand}"/>
             </Grid>
         </Border>
         <ItemsControl Grid.Row="1" ItemsSource="{Binding Chairs}">
@@ -35,10 +35,10 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Border Grid.Row="{Binding Row}" Grid.Column="{Binding Col}" Margin="10,10,10,10" BorderThickness="1" BorderBrush="Black">
+                    <Border Grid.Row="{Binding Row, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="{Binding Col, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10,10,10,10" BorderThickness="1" BorderBrush="Black">
                         <Grid>
-                            <CheckBox VerticalAlignment="Top" IsChecked="{Binding Checked}"/>
-                            <TextBox Text="{Binding Name}" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontSize="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                            <CheckBox VerticalAlignment="Top" IsChecked="{Binding Checked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBox IsEnabled="{Binding Checked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontSize="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                         </Grid>
                     </Border>
                 </DataTemplate>
